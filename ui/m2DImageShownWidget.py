@@ -23,7 +23,7 @@ class m2DImageShownWidget(AbstractImageShownWidget):
         self.imageViewer = None
         self.qvtkWidget = None
         self.ren = None
-
+	#under construction
     def dropEvent(self, event):
         super().dropEvent(event)
         self.seriesPath = event.mimeData().getImageExtraData()["seriesPath"]
