@@ -112,6 +112,7 @@ class CustomViewBox(pg.ViewBox):
                 self.setCrosshairPosition((mousePoint / self.vs).astype(np.int))
 
     def wheelEvent(self, ev):
+		#rewrite wheelEvent by evermg42#
         ev.accept()
         self.sigWheelChanged.emit(ev.delta()//120)##one step for 120
 
@@ -303,6 +304,7 @@ class crosshairView(pg.ImageView):
         self.view.sigWheelChanged.connect(self.wheelChangeEvent)
 
     def wheelChangeEvent(self, delta):
+		#rewrited by evermg42
         self.setCurrentIndex(self.currentIndex+delta)
 
     def setCrosshairPosition(self, pos):

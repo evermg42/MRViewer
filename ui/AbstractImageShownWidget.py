@@ -31,12 +31,12 @@ class AbstractImageShownWidget(QWidget):
         else:
             event.ignore()
 
-    def resizeEvent(self, QResizeEvent):
-        print("resizeEvent")
-        print('parentWidgetSize:', self.width(), self.height())
-        if self.qvtkWidget is not None and self.qvtkWidget.size() != self.size():
-            self.qvtkWidget.setFixedSize(self.size())
-            print('qvtkSize', self.qvtkWidget.size())
+    # def resizeEvent(self, QResizeEvent):
+    #     print("resizeEvent")
+    #     print('parentWidgetSize:', self.width(), self.height())
+    #     if self.qvtkWidget is not None and self.qvtkWidget.size() != self.size():
+    #         self.qvtkWidget.setFixedSize(self.size())
+    #         print('qvtkSize', self.qvtkWidget.size())
 
     def closeEvent(self, QCloseEvent):
         super().closeEvent(QCloseEvent)
